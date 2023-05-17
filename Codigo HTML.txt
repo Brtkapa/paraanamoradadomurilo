@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Libera a 🌸 esse fim de semana?</title>
+  <style>
+    #nao-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+  <script>
+    function moveBotaoNao() {
+      var naoBtn = document.getElementById("nao-btn");
+      var windowWidth = window.innerWidth;
+      var windowHeight = window.innerHeight;
+      var randomX = Math.floor(Math.random() * (windowWidth - 100));
+      var randomY = Math.floor(Math.random() * (windowHeight - 40));
+      naoBtn.style.left = randomX + "px";
+      naoBtn.style.top = randomY + "px";
+    }
+  </script>
+</head>
+<body>
+  <button onclick="alert('Claro! 🌸 Aproveite o fim de semana!')">Libera a 🌸 esse fim de semana?</button>
+  <button id="nao-btn" onclick="moveBotaoNao()" disabled>Não</button>
+</body>
+</html>
